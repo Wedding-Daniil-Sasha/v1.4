@@ -1,0 +1,105 @@
+:root {
+  --bg-color: #fdfcf9;
+  --text-color: #2e2e2e;
+  --accent-green: #4f6b4f;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: 'Playfair Display', serif;
+  background: linear-gradient(to bottom, rgba(255,255,255,0.85), rgba(245,245,245,0.95)),
+              url('https://images.unsplash.com/photo-1506748686214-e9df14d4d9d0?ixlib=rb-4.0.3&auto=format&fit=crop&w=1950&q=80') center center/cover no-repeat fixed;
+  background-blend-mode: lighten;
+  color: var(--text-color);
+  padding: 40px 20px;
+  min-height: 100vh;
+}
+main.card {
+  background-color: rgba(253, 252, 249, 0.95);
+  padding: 40px 30px;
+  border-radius: 12px;
+  max-width: 600px;
+  margin: 0 auto;
+  text-align: center;
+  box-shadow: 0 0 30px rgba(0,0,0,0.05);
+  animation: fadeInUp 1.2s ease forwards;
+  opacity: 0;
+}
+.wedding-day {
+  font-size: 1.2rem;
+  letter-spacing: 0.1em;
+  margin-bottom: 0.5rem;
+  color: #666;
+}
+.names {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+}
+.name {
+  color: var(--accent-green);
+}
+.and {
+  font-family: 'Great Vibes', cursive;
+  font-size: 2rem;
+  align-self: flex-end;
+  color: var(--accent-green);
+}
+.photo {
+  width: 100%;
+  max-height: 350px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin: 2rem 0;
+}
+.invite-text {
+  font-size: 1rem;
+  line-height: 1.6;
+  margin-bottom: 0.8rem;
+  color: #333;
+}
+.family {
+  font-family: 'Great Vibes', cursive;
+  font-size: 1.5rem;
+  color: var(--accent-green);
+  margin-bottom: 2rem;
+}
+.telegram-button {
+  display: inline-block;
+  padding: 0.75rem 1.8rem;
+  background-color: var(--accent-green);
+  color: #fff;
+  font-size: 1rem;
+  font-weight: 500;
+  border-radius: 40px;
+  text-decoration: none;
+  transition: background 0.3s ease;
+}
+.telegram-button:hover {
+  background-color: #3d553d;
+}
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@media (max-width: 480px) {
+  .names {
+    font-size: 2rem;
+  }
+  .family {
+    font-size: 1.3rem;
+  }
+}
